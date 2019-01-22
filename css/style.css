@@ -1,0 +1,914 @@
+
+
+/* ------Mobile First-----*/
+
+@media screen and (max-width: 823px){
+
+html {
+    color: #222;
+    font-size: 2.3em;
+    line-height: 1.6;
+}
+
+body {
+    width: 100%;
+}
+
+
+#one{
+    width: 15%;
+    background-color: white;
+    font-size: 0.8em;
+    padding: 6% 30% 0 0;
+     font-family: 'Gloria Hallelujah', cursive;
+    margin: 0;
+}
+
+/*Intro text animation*/
+
+.intro{
+  height: 15%;
+  padding-top: 3em;
+  top: 10%;
+ display: block; 
+    
+}
+.css-typing p {
+  margin: 3% 8%;
+  border-right: .15em solid orange;
+  font-family: 'Dosis', sans-serif;;
+  font-size: 0.6em;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.css-typing p:nth-child(1) {
+  width: 16em;
+  -webkit-animation: type 3s steps(40, end);
+  animation: type 3s steps(40, end);
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.css-typing p:nth-child(2) {
+  width: 12em;
+  opacity: 0;
+  -webkit-animation: type2 3s steps(40, end);
+  animation: type2 3s steps(40, end);
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+
+@keyframes type {
+  0% {
+    width: 0;
+  }
+  99.9% {
+    border-right: .15em solid orange;
+  }
+  100% {
+    border: none;
+  }
+}
+
+@-webkit-keyframes type {
+  0% {
+    width: 0;
+  }
+  99.9% {
+    border-right: .15em solid orange;
+  }
+  100% {
+    border: none;
+  }
+}
+
+@keyframes type2 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  99.9% {
+    border-right: .15em solid orange;
+  }
+  100% {
+    opacity: 1;
+    border: none;
+  }
+}
+
+@-webkit-keyframes type2 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  99.9% {
+    border-right: .15em solid orange;
+  }
+  100% {
+    opacity: 1;
+    border: none;
+  }
+}
+
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+@-webkit-keyframes blink {
+  50% {
+    border-color: tranparent;
+  }
+}
+
+    
+/* Font-size of menu letters bigger
+#menu li a {
+    font-size: 4em;
+}*/
+
+
+/*--------HAMBURGER MENU----*/
+@import "compass/css3";
+
+$menu-width: 40px;
+$menu-height: 50px;
+
+.menu {
+  width: $menu-width;
+  height: $menu-height;
+
+  margin-left: -($menu-width / 2);
+  margin-top: -($menu-height / 2);
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+.menu-1 {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  
+   &.open {
+    .menu-item {
+      background: black;
+      
+      &:first-child {
+        @include rotate(45deg);
+        @include transform-origin(10px);
+      }
+      &:nth-child(2) {
+        opacity: 0;
+      }
+      &:nth-child(3) {
+        @include rotate(-45deg);
+        @include transform-origin(8px);
+      }
+    }
+  }
+}
+.menu-item {
+  @include transition(all 0.2s);
+  
+  display: block;
+  width: $menu-width;
+  height: 3px;
+  margin: 0 0 5px;
+
+  background:black;
+}
+nav ul{
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  overflow: hidden;
+  color: black;
+  padding: 0;
+  text-align: center;
+  margin: 0;
+  transition: all 1s ease-in-out;
+    max-height: 0px;
+    position: fixed;
+    z-index: 2;
+    
+}
+    
+@media (min-width:568px) and (max-width:823px){
+   nav ul{
+       overflow: scroll;
+    }
+    }
+nav ul li{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 8px;
+    font-size: 0.8em;
+    font-family: 'Dosis', sans-serif;
+  }
+  
+ 
+nav ul li a{
+  text-decoration: none;
+  color: inherit;
+}
+ 
+nav ul li:hover {
+  background-color: #e5e5e5;
+}
+    
+.showing{
+    max-height: 30em;
+    position: fixed;
+    top: 2.2em;
+    padding-top: 4%;
+    overflow: scroll;
+  }
+ 
+.menu-bars{
+  width: 100%;
+  display: block;
+  position: fixed;
+  height: 45px;
+  background-color: white;
+  text-align: right;
+  border-bottom: solid 2px black;
+  padding: 20px 0px;
+  cursor: pointer;
+  display: none;
+  z-index: 1;
+}
+ 
+.menu-bars .fas{
+  margin-right: 20px;
+}
+
+.fa-2x {
+    font-size: 1em;
+}
+
+ 
+  nav ul{
+    position: fixed;
+    top: 2em;
+  }
+ 
+ .social_media {
+    padding-top: 5%;
+    padding-bottom: 15%;
+}
+.socialicons {
+        display: none;
+    }
+.icon {
+    width: 30px;
+    margin: 1%;
+}
+  .menu-bars{
+    display: block;
+    position: fixed;
+    height: 45px;
+  }
+
+  
+
+
+
+/*------END-----*/
+/*-------MAIN SECTION-----*/
+
+.parent {
+    display: -ms-flexbox; /* IE 10 */
+    display: flex; 
+    -ms-flex-align: center; /* IE 10 */
+    align-items: center;
+
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    flex-flow: column;
+    top: 20%;
+}
+
+#speech_bubble img {
+    margin: 100px 10% 0 20%;
+    display: flex;
+    width: 70%;
+    
+}
+
+#photo {
+    width: 80%;
+    margin-top: 9%;
+    margin-left: 5%;
+    display: inline-block;
+    display: flex;
+}
+    
+    .bigscale{
+        display:none;
+    }
+.about {
+   align-content: center;
+   width: 90%;
+    margin: auto;
+
+}
+
+#about{
+    height:10px;
+    width: 100%;
+}
+.about h1{
+
+    display: block;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 0.8em;
+    margin: 25% 5% 0 5%;
+    
+    
+}
+
+.about p {
+    width: 90%;
+    margin-top: 10%;
+    margin-left: 5%;
+    /*position: relative;*/
+    display: inline-block;
+    left: 0;
+    text-align: justify;
+    font-family: 'Dosis', sans-serif;
+    font-size: 0.5em;
+}
+
+.service {
+    align-content: center;
+    width: 90%;
+    margin: auto;
+}
+
+.service h1 {
+    display: block;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 0.8em;
+    margin: 15% 5% 0 5%;
+    width: 30%;
+}
+
+.service img {
+    width: 30%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.service h4 {
+    font-size: 0.7em;
+    margin: 0;
+    text-align: center;
+    font-family: 'Dosis', sans-serif;
+    
+}
+
+.service p {
+    width: 90%;
+    margin-top: 10%;
+    margin-left: 5%;
+    display: inline-block;
+    left: 0;
+    text-align: justify;
+    font-family: 'Dosis', sans-serif;
+    font-size: 0.5em;
+}
+
+.portfolio {
+   align-content: center;
+   width: 90%;
+   margin:auto;
+ 
+}
+
+.portfolio h1 {
+    display: block;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 0.8em;
+    margin: 15% 5% 10% 5%;
+    width: 30%;
+
+}
+
+.image{
+    width: 88%;
+    margin-left: 6%;
+    transition: .5s ease;
+   backface-visibility: hidden;
+    opacity: 1;
+}
+
+.portfolio p {
+    width: 90%;
+    margin-top: 10%;
+    margin-left: 5%;
+    display: inline-block;
+    left: 0;
+    text-align: justify;
+    font-family: 'Dosis', sans-serif;
+    font-size: 0.5em;
+    
+}
+ .container {
+    /*position: relative;*/
+    width:100%;
+}
+.middle {
+  transition: .8s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+.container:hover .image {
+  opacity: 0.2;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+.text {
+  background-color: #637a9c;
+  width: 200px;
+  height:50px;
+  border-radius: 10px;
+  font-size: 1em;
+  padding: 16px 32px 20px 32px;
+    font-family: 'Dosis', sans-serif;
+}
+
+.text a{
+    color: white;
+    
+}
+/*----------CONTACT FORM_______*/
+.contact-title {
+    margin-top: 50px;
+    color: black;
+    transition: all 4s ease-in-out;
+}
+.contact-title h1 {
+    font-size: 0.8em;
+    line-height: 20px;
+    font-family: 'Gloria Hallelujah', cursive;
+    margin-left: 10%;
+    
+}
+
+
+    form{
+        margin-top: 50px auto;
+        transition: all 4s ease-in-out;
+        width: 90%;
+        
+    }
+#contact-form{
+    margin: 10%;
+}
+.form-control {
+    width: 90%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid gray;
+    color: black;
+    font-size: 18px;
+    margin-bottom: 16px;
+    font-family: 'Dosis', sans-serif;
+}
+input{
+    height: 45px;
+}
+
+form .submit {
+    background: #ff5722;
+    border-color: transparent;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    height: 50px;
+    margin-top: 20px;
+    font-family: 'Dosis', sans-serif;
+}
+
+form .submit:hover {
+    background-color: #f44336;
+    cursor: pointer;
+}
+     /* Contact section------*/
+    .footer-right {
+        width: 80%;
+        margin: 5% auto;
+        
+    }
+    .footer-right img {
+        width: 8%;
+        display: inline-block;
+        margin-top: 2%;
+    }
+    
+    .footer-right p {
+      font-family: 'Dosis', sans-serif; 
+        font-size:0.5em;
+        
+    }
+    .info {
+        width: 75%;
+        display: inline-block;
+        margin-left: 5%;
+    }
+    .i_section {
+    position: absolute;
+    height: 10%;
+    width: 20%;
+    margin-left: 10%;
+}
+
+
+}
+/*-------END-----*/
+
+@media screen and (min-width: 823px){
+    
+    
+.topw{
+  width: 80%;
+  margin: 0 10%;
+  position: fixed;
+  height: 7%;
+  background-color: white;
+  border-bottom: solid 2px black;
+  padding: 10px 0px;
+  z-index: 1;
+top: 0;
+} 
+    .menu-bars{
+        display: inline;
+    }
+    .fas {
+        display: none;
+    }  
+    .social_media {
+        display: none;
+    }
+    
+    nav{
+        margin-top: 1%;
+        
+    }
+    #one {
+        font-size: 2em;
+        font-family: 'Gloria Hallelujah', cursive;
+        margin: 20px 50px 5px 10px;
+    }
+
+    ul{
+        display: inline;
+        width: 55%;
+        text-align: right;
+    }
+li {
+    display: inline;
+    font-family: 'Dosis', sans-serif;
+    font-size: 1.7vw;
+}
+
+li a {
+    
+    color: black;
+  position: relative;
+  margin: 2%;
+  padding-bottom: 5px;
+  text-decoration: none;
+    
+}
+
+
+li a:hover {
+ color: #ff0000;
+}
+
+li a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000000;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+
+li a:hover:before{
+    visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+    
+    .css-typing{
+        display: none;
+    }
+    
+    #photo{
+        width: 40%;
+        margin-left: 7%;
+    }
+    .intro{
+        width: 80%;
+        margin: 13% auto;
+    }
+    .bigscale{
+        width: 30%;
+        display: inline-block;
+        vertical-align: top;
+        font-family: 'Dosis', sans-serif;
+        font-size: 4.5vw;
+        text-align: justify;
+        margin-left: 15%;
+        
+    }
+    
+    .bigscale p {
+        margin-top: 10%;
+        text-transform: uppercase;
+    }
+    .about {
+        width: 80%;
+        margin: 4% auto;
+        
+    }
+    
+    .about h1 {
+        font-family: 'Gloria Hallelujah', cursive;
+        font-size: 1.7em;
+         margin: 5% 0;
+    }
+    
+    .about p {
+        font-size: 1.3em;
+        font-family: 'Dosis', sans-serif;
+    }
+    
+    .service {
+        width: 80%;
+        margin: 4% auto;
+    }
+    
+    .service h1 {
+        font-family: 'Gloria Hallelujah', cursive;
+        font-size: 1.7em;
+        margin: 5% 0;
+    }
+    
+    #top_left{
+        width: 48%;
+        display: inline-block;
+        text-align: center;
+        vertical-align: top;
+    }
+    
+    #top_left img{
+        margin: 3% 17.5%;
+        width: 65%;
+    }
+    
+    
+     #top_left h4{
+        font-family: 'Gloria Hallelujah', cursive;
+        font-size: 1.3em;
+        margin: auto;
+    }
+    
+    #top_left p {
+        font-size: 1.3em;
+        font-family: 'Dosis', sans-serif;
+        margin: 4% 3%;
+    }
+    #top_right{
+        width: 48%;
+        display: inline-block;
+        text-align: center;
+        vertical-align: top;
+    }
+    
+    #top_right h4{
+        font-family: 'Gloria Hallelujah', cursive;
+        font-size: 1.3em;
+        margin: auto;
+    }
+    
+    #top_right img {
+        width: 40%;
+        margin: 4.5% 30%;
+    }
+    
+    #top_right p{
+        font-size: 1.3em;
+        font-family: 'Dosis', sans-serif;
+     margin: 4% 3%;
+    }
+    
+    .portfolio {
+        width: 80%;
+        margin: 4% auto;
+        
+    }
+    
+    .portfolio h1 {
+    font-size: 1.7em;
+    margin: 5% 0 ;
+    display: block;
+    position: relative;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+.container {
+  position: relative;
+  width: 45%;
+display: inline-block;
+}
+
+.portfolio img {
+    width: 100%;
+    opacity: 1;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+.portfolio p {
+    width: 45%;
+    display: inline-block;
+    margin-left: 5%;
+    text-align: justify;
+    margin-top: 0;
+    vertical-align: top;
+    font-size: 1.3em;
+        font-family: 'Dosis', sans-serif;
+}
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  
+  
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: gainsboro;
+  color: black;
+  font-size: 16px;
+  padding: 16px 32px;
+  border-radius: 7px;
+  
+}
+    
+ /*----------CONTACT FORM_______*/
+.contact-title {
+    margin-top: 5%;;
+    color: black;
+    transition: all 4s ease-in-out;
+}
+.contact-title h1 {
+    font-size: 1.7em;
+    line-height: 20px;
+    font-family: 'Gloria Hallelujah', cursive;
+    margin-left: 10%;
+    
+}
+
+
+form{
+     /*   margin-top: 50px auto;*/
+        transition: all 4s ease-in-out;
+        
+    }
+#contact-form{
+    margin: 3% 5% 3% 10%; 
+    width: 50%;
+    display: inline-block;
+}
+.form-control {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid gray;
+    color: black;
+    font-size: 18px;
+    margin-bottom: 16px;
+    font-family: 'Dosis', sans-serif;
+}
+input{
+    height: 45px;
+}
+
+form .submit {
+    background: #ff5722;
+    border-color: transparent;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    height: 50px;
+    margin-top: 20px;
+    font-family: 'Dosis', sans-serif;
+}
+
+form .submit:hover {
+    background-color: #f44336;
+    cursor: pointer;
+}
+
+    .footer-right {
+        width: 30%;
+        display: inline-block;
+    }
+/*-------END-----*/
+
+    
+    /* Contact section------*/
+    .footer-right {
+        vertical-align: top;
+        margin-top: 5%;
+    }
+    .footer-right img {
+        width: 5%;
+        display: inline-block;
+    }
+    
+    .footer-right p {
+      font-family: 'Dosis', sans-serif;  
+    }
+    .info {
+        width: 85%;
+        display: inline-block;
+        margin-left: 5%;
+    }
+    .i_section {
+    position: absolute;
+    height: 10%;
+    width: 20%;
+    margin-left: 10%;
+}
+.fab {
+    color: black;
+    height: 3.5%;
+    margin-left: 6%;
+}
+
+
+
+#fab {
+    margin-left: 50%;
+    margin-bottom: 5px;
+}
+
+#in {
+    height: 8%;
+    margin-top: 1%;
+} 
+    .socialicons img {
+        display: inline-block;
+      width:8%;
+        margin-right: 5%;
+        margin-top: 5%;
+    }
+}
+    
