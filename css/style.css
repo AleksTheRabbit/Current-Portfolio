@@ -1,4 +1,8 @@
-
+@media screen and (max-width:568px){
+    .tabletversion {
+        display: none;
+    }
+}
 
 /* ------Mobile First-----*/
 
@@ -206,6 +210,17 @@ nav ul{
    nav ul{
        overflow: scroll;
     }
+    
+    .css-typing {
+        display: none;
+    }
+    .tabletversion {
+        width: 90%;
+        margin-left: 5%;
+        display: inline-block;
+        font-family: 'Dosis', sans-serif;
+        font-size: 5vw;
+    }
     }
 nav ul li{
     box-sizing: border-box;
@@ -359,7 +374,7 @@ nav ul li:hover {
     display: block;
     font-family: 'Gloria Hallelujah', cursive;
     font-size: 0.8em;
-    margin: 15% 5% 0 5%;
+    margin: 15% 5% 5% 5%;
     width: 30%;
 }
 
@@ -652,7 +667,9 @@ li a:hover:before{
         margin-left: 15%;
         
     }
-    
+    .tabletversion {
+        display: none;
+    }
     .bigscale p {
         margin-top: 10%;
         text-transform: uppercase;
@@ -682,7 +699,7 @@ li a:hover:before{
     .service h1 {
         font-family: 'Gloria Hallelujah', cursive;
         font-size: 1.7em;
-        margin: 5% 0;
+        margin: 7% 0;
     }
     
     #top_left{
